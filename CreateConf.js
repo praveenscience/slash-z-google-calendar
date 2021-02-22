@@ -18,7 +18,7 @@ function createConference(arg= {}) {
   }
 
   var dataBuilder = ConferenceDataService.newConferenceDataBuilder();
-  var conferenceInfo = create3rdPartyConference(calendarEvent);
+  var conferenceInfo = create3rdPartyConference({calendarEvent, eventData});
 
   if (conferenceInfo.error == 'AUTH') {
     const authenticationUrl = 'https://hack.af/z-authenticate';
@@ -45,11 +45,10 @@ function createConference(arg= {}) {
   return dataBuilder.build();
 }
 
-function create3rdPartyConference(_calendarEvent) {
-  console.log('creating 3rd party conference with info', JSON.stringify(_calendarEvent, null, 2))
-  const data = {
-    id: 'asdf',
-    videoUri: 'https://hack.af/z?id=asdf'
-  };
+function create3rdPartyConference({calendarEvent, eventData}) {
+  const { calendarId, eventId } = eventData;
+  const url = `https://js-slash-z.hackclub.com/api/endpoints/new-schedule-link?id=${calendarId}&event=${eventId}`;
+  const response = UrlFetchApp.fetch(url);
+  const data = JSON.parse(response.getContentText());
   return data;
 }
