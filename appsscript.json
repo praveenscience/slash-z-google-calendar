@@ -20,8 +20,8 @@
       "conferenceSolution": [
         {
           "id": 1,
-          "name": "My Web Conference",
-          "logoUrl": "http://placekitten.com/200/300",
+          "name": "Slash Z",
+          "logoUrl": "https://lh3.googleusercontent.com/pw/ACtC-3dcVJ4xZjJUcIWvIm0Bv1ZbjcPSBKP7BE1_HEtHh1JWum6qUtsRrReOBZ3UXU-K4EUdU1c6iO--6MylihaLOdrx2cgwAb0IM251_6JplZl0-jckQiIuszHkAHF-clRcot9xzZ_0cd_lnjIicQqBbUqI=s96-no?authuser=0",
           "onCreateFunction": "createConference"
         }
       ],
@@ -31,8 +31,8 @@
       "homepageTrigger": {
         "enabled": false
       },
-      "logoUrl": "http://placekitten.com/200/300",
-      "name": "My Web Conference"
+      "logoUrl": "https://cloud-h34iajpii-hack-club-bot.vercel.app/0zoom-square.png",
+      "name": "Slash Z"
     }
   },
   "oauthScopes": [
