@@ -20,7 +20,7 @@
       "conferenceSolution": [
         {
           "id": 1,
-          "name": "/z",
+          "name": "Zoom Pro Meeting",
           "logoUrl": "https://lh3.googleusercontent.com/pw/ACtC-3cQUBaTvi0sJ2eTJP37MCAnajBD8DYFRo1CCfM1O_rfIDKO7TZmR4PZ2LGSGKgqq5a4X0AyxSo-f00vzNIHCnVQjwQLX2eKef9b_D96ga0-mfDU3G99gO8_tbf8R0x7amR-lr9SGj38_efuMCxwCLbI=s512-no?authuser=0",
           "onCreateFunction": "createConference"
         }
