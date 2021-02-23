@@ -24,7 +24,7 @@ function createConference(arg= {}) {
   var conferenceInfo = create3rdPartyConference({calendarEvent, eventData});
 
   if (conferenceInfo.error == 'AUTH') {
-    const authenticationUrl = 'https://hack.af/z-authenticate';
+    const authenticationUrl = conferenceInfo.authUrl;
     const error = ConferenceDataService.newConferenceError()
       .setConferenceErrorType(ConferenceDataService.ConferenceErrorType.AUTHENTICATION)
       .setAuthenticationUrl(authenticationUrl);
