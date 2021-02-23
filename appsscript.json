@@ -20,8 +20,8 @@
       "conferenceSolution": [
         {
           "id": 1,
-          "name": "Slash Z",
-          "logoUrl": "https://lh3.googleusercontent.com/pw/ACtC-3dcVJ4xZjJUcIWvIm0Bv1ZbjcPSBKP7BE1_HEtHh1JWum6qUtsRrReOBZ3UXU-K4EUdU1c6iO--6MylihaLOdrx2cgwAb0IM251_6JplZl0-jckQiIuszHkAHF-clRcot9xzZ_0cd_lnjIicQqBbUqI=s96-no?authuser=0",
+          "name": "/z",
+          "logoUrl": "https://lh3.googleusercontent.com/pw/ACtC-3cQUBaTvi0sJ2eTJP37MCAnajBD8DYFRo1CCfM1O_rfIDKO7TZmR4PZ2LGSGKgqq5a4X0AyxSo-f00vzNIHCnVQjwQLX2eKef9b_D96ga0-mfDU3G99gO8_tbf8R0x7amR-lr9SGj38_efuMCxwCLbI=s512-no?authuser=0",
           "onCreateFunction": "createConference"
         }
       ],
@@ -31,8 +31,8 @@
       "homepageTrigger": {
         "enabled": false
       },
-      "logoUrl": "https://cloud-h34iajpii-hack-club-bot.vercel.app/0zoom-square.png",
-      "name": "Slash Z"
+      "logoUrl": "https://cloud-l2sjoryry-hack-club-bot.vercel.app/1application_icons512.png",
+      "name": "/z"
     }
   },
   "oauthScopes": [
