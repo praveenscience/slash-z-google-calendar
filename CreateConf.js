@@ -3,19 +3,22 @@ function createConference(arg= {}) {
   const { eventData } = arg;
   const { calendarId, eventId } = eventData;
 
-  // Retrieve the Calendar event information using the Calendar
-  // Advanced service.
-  var calendarEvent;
-  try {
-    calendarEvent = Calendar.Events.get(calendarId, eventId);
-  } catch (err) {
-    // The calendar event does not exist just yet; just proceed with the
-    // given event ID and allow the event details to sync later.
-    console.log(err);
-    calendarEvent = {
-      id: eventId,
-    };
-  }
+  calendarEvent = {
+    id: eventId,
+  };
+  // // Retrieve the Calendar event information using the Calendar
+  // // Advanced service.
+  // var calendarEvent;
+  // try {
+  //   calendarEvent = Calendar.Events.get(calendarId, eventId);
+  // } catch (err) {
+  //   // The calendar event does not exist just yet; just proceed with the
+  //   // given event ID and allow the event details to sync later.
+  //   console.log(err);
+  //   calendarEvent = {
+  //     id: eventId,
+  //   };
+  // }
 
   var dataBuilder = ConferenceDataService.newConferenceDataBuilder();
   var conferenceInfo = create3rdPartyConference({calendarEvent, eventData});
