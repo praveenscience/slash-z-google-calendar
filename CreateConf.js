@@ -43,7 +43,8 @@ function createConference(arg= {}) {
       .setUri(conferenceInfo.videoUri);
 
     dataBuilder.setConferenceId(conferenceInfo.id)
-               .addEntryPoint(videoEntryPoint);
+               .addEntryPoint(videoEntryPoint)
+               .setNotes(`<a href="${conferenceInfo.videoUri}">${conferenceInfo.videoUri}</a>`);
   }
   return dataBuilder.build();
 }
