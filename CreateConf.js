@@ -38,14 +38,15 @@ function createConference(arg= {}) {
     // No error, so build the ConferenceData object from the
     // returned conference info.
 
+    dataBuilder.setConferenceId(conferenceInfo.id);
+
     if (conferenceInfo.videoUri) {
       const videoEntryPoint = ConferenceDataService.newEntryPoint()
         .setEntryPointType(ConferenceDataService.EntryPointType.VIDEO)
         .setUri(conferenceInfo.videoUri);
 
-      dataBuilder.setConferenceId(conferenceInfo.id)
-                .addEntryPoint(videoEntryPoint)
-                .setNotes(`<a href="${conferenceInfo.videoUri}">${conferenceInfo.videoUri}</a>`);
+      dataBuilder.addEntryPoint(videoEntryPoint)
+        .setNotes(`<a href="${conferenceInfo.videoUri}">${conferenceInfo.videoUri}</a>`);
     }
 
     if (conferenceInfo.phoneUri) {
@@ -55,10 +56,14 @@ function createConference(arg= {}) {
         .addFeature(ConferenceDataService.EntryPointFeature.TOLL);
 
       dataBuilder.addEntryPoint(phoneEntryPoint);
+    }
 
-    //   var moreEntryPoint = ConferenceDataService.newEntryPoint()
-    // .setEntryPointType(ConferenceDataService.EntryPointType.MORE)
-    // .setUri('https://example.com/moreJoiningInfo')
+    if (conferenceInfo.moreUri) {
+      const moreEntryPoint = ConferenceDataService.newEntryPoint()
+        .setEntryPointType(ConferenceDataService.EntryPointType.MORE)
+        .setUri(conferenceInfo.moreUri);
+
+      dataBuilder.addEntryPoint(moreEntryPoint);
     }
   }
   return dataBuilder.build();
