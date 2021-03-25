@@ -1,4 +1,10 @@
-This project is managed using [clasp](https://developers.google.com/apps-script/guides/clasp)
+# Slash Z + Google Calendar
+
+This project works in tandem with [/z](https://github.com/hackclub/slash-z) to let Hack Clubbers schedule Zoom Pro meetings straight from Google Calendar.
+
+## Local development
+
+This project is managed using [clasp](https://developers.google.com/apps-script/guides/clasp). You'll want to install it.
 
 _Caveats_
 
