@@ -38,8 +38,7 @@ function createConference(arg= {}) {
     // No error, so build the ConferenceData object from the
     // returned conference info.
 
-    dataBuilder.setConferenceId(conferenceInfo.id)
-      .setNotes(`Meeting created with <a href="https://js-slash-z.hackclub.com">/z</a>`);
+    dataBuilder.setConferenceId(conferenceInfo.id);
 
     if (conferenceInfo.videoUri) {
       const videoEntryPoint = ConferenceDataService.newEntryPoint()
@@ -47,6 +46,10 @@ function createConference(arg= {}) {
         .setUri(conferenceInfo.videoUri);
 
       dataBuilder.addEntryPoint(videoEntryPoint);
+
+      dataBuilder.setNotes(`<a href="${conferenceInfo.videoUri}">${conferenceInfo.videoUri}</a>`);
+    } else {
+      dataBuilder.setNotes(`Meeting created with <a href="https://js-slash-z.hackclub.com">/z</a>`);
     }
 
     if (conferenceInfo.phoneUri) {
